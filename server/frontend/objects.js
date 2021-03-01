@@ -57,16 +57,17 @@ class Center {
     buildCards(indexOne, indexTwo, player) {
         temp = False
         newBuiltValue = (this.pile[indexOne].builtValue + this.pile[indexTwo].builtValue)
-        for i in range(len(player.hand)):
-            if newBuiltValue == player.hand[i].value:
+        for(i in player.hand.length){
+            if (newBuiltValue == player.hand[i].value){
                 temp = True
                 break
+            }
+        }
 
-        if (this.pile[indexOne].isBuilt and this.pile[indexTwo].isBuilt and temp) {
-            for i in range(len(this.pile[indexOne].pile)):
+        if (this.pile[indexOne].isBuilt && this.pile[indexTwo].isBuilt && temp) {
+            for (i in this.pile[indexOne].pile.length) {
                 this.pile[indexTwo].pile.append(this.pile[indexOne].pile.pop(0))
-
-        
+            }
             this.pile[indexTwo].builtValue = newBuiltValue
             this.pile[indexTwo].collectValue = newBuiltValue
             this.pile.pop(indexOne)
@@ -74,15 +75,14 @@ class Center {
         else {
             console.log('Cannot Build Card.')
         }
-            
     }
 
     collectCards(indexOne, indexTwo) {
-        if(this.pile[indexOne].collectValue == this.pile[indexTwo].collectValue) {
-            for(i in range(len(this.pile[indexOne].pile))) {
-                this.pile[indexTwo].pile.append(this.pile[indexOne].pile.pop(0))
+        if (this.pile[indexOne].collectValue == this.pile[indexTwo].collectValue) {
+            for (i in this.pile[indexOne].pile) {
+                this.pile[indexTwo].pile.append(this.pile[indexOne].pile.shift())
             }
-            this.pile[indexTwo].isBuilt = False
+            this.pile[indexTwo].isBuilt = false
             this.pile.pop(indexOne)
         }
         else {
@@ -93,3 +93,39 @@ class Center {
 
 
 }
+
+class CenterPile {
+    constructor() {
+        this.pile = [] 
+        this.builtValue = 0 
+        this.collectValue = this.builtValue
+        this.isBuilt = True
+    }
+}
+
+class Print {
+    constructor() {
+        this.errorStr = "there was an error";
+        this.error2Str = "you typed an invalid command or just play the card";
+        this.error3str = "you can't do that";
+        this.error4Str = "you can't play multiple times";
+        this.noStr = "NEIN";
+    }
+
+    error(name){
+        console.log(name + ", " + this.errorStr);
+    }
+    error2(name){
+        console.log(name + ", " + this.error2Str);
+    }
+    error3(name){
+        console.log(name + ", " + this.error3Str);
+    }
+    error4(name){
+        console.log(name + ", " + this.error4Str);
+    }
+    no(){
+        console.log(this.noStr);
+    }
+}
+
