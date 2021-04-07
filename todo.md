@@ -63,4 +63,5 @@ for card in center.pile[indexCenterPile].pile
 # todo 
 * add pop(index) to javascript (old/overwrites.js)
 * discord addon?
-
+* link repo from page
+* ML bot
