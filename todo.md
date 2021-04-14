@@ -65,3 +65,6 @@ for card in center.pile[indexCenterPile].pile
 * discord addon?
 * link repo from page
 * ML bot
+
+# React
+* State: Components have states, we could use this for knowing whose turn it is, knowing the built value of a deck, knowing .isBuilt, etc. When modifying state it's important to re-render a component to update the state. See [State FAQ](https://reactjs.org/docs/faq-state.html).
