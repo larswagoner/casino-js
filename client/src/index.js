@@ -2,16 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // import screens
-import Start from './screens/Start'
-import Main from './screens/Main'
-import Join from './screens/Join'
+import App from './App'
+
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Join />
-    
+        <App />
+
   </React.StrictMode>,
   document.getElementById('root')
 );

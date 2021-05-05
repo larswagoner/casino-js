@@ -68,3 +68,19 @@ for card in center.pile[indexCenterPile].pile
 
 # React
 * State: Components have states, we could use this for knowing whose turn it is, knowing the built value of a deck, knowing .isBuilt, etc. When modifying state it's important to re-render a component to update the state. See [State FAQ](https://reactjs.org/docs/faq-state.html).
+
+# Screens
+* Home Page: Only have "create game" button. To join a game you need a link. 
+
+
+
+https://github.com/mizanxali/uno-online
+https://www.pinturillo2.com/
+
+
+# For 19th of may
+* learn react state and useState()
+* find a way to organize into classes
+* learn "..." in JS
+* research having more than 2 players
+
