@@ -1,20 +1,23 @@
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+function randomStringGen() {
+  return "lol"
+}
 
 
-function HomePage() {
+const HomePage = () => {
+  const [roomCode, setRoomCode] = useState('')
 
-    const [player1, setPlayer1Deck] = useState([])
-
-    console.log(this.state.player1)
-
-    return (
-        <div>
-        <p>Info about how it works</p>
-        <p>Instructions</p>
-        <button>Start a new game</button>
-        </div>
-    )
+  return (
+    <div className="HomePage">
+      <div className="createButton">
+        {/* <link to={`/?=${randomStringGen()}`}> */}
+          <button>Start New Game</button>
+        {/* </link> */}
+      </div>
+    </div>
+  )
 }
 
 export default HomePage
