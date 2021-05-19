@@ -13,15 +13,12 @@ const Home = () => {
     room += chars[Math.floor(Math.random() * chars.length)]
   }
 
-  useEffect(() => {
-    const connectionOptions =  {
-      "forceNew" : true,
-      "reconnectionAttempts": "Infinity", 
-      "timeout" : 10000,                  
-      "transports" : ["websocket"]
-    }
-    socket = io.connect(ENDPOINT, connectionOptions)
-  }, [])
+  
+
+//   useEffect(() => {
+    
+//     socket = io.connect(ENDPOINT, connectionOptions)
+//   }, [])
 
   
 
@@ -32,7 +29,8 @@ const Home = () => {
       <h1>Casino the Card Game</h1>
       <p>Instructions...</p>
       <Link to={`/wait?room=${room}`}>
-        <button onClick={() => socket.emit('createRoom', {room} )}>Start New Game</button>
+          {/*  */}
+        <button onClick={ () => socket.emit('createRoom', { room } ) }>Start New Game</button>
       </Link>
     </div>
   )

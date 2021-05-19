@@ -9,6 +9,10 @@ const WaitingRoom = (props) => {
     <div>
       <p>Waiting room choose a name and click ready</p>
       <p>Share this link with your friends!</p>
+      <p>Players: </p>
+      <ul>
+
+      </ul>
       <p>{window.location.href}</p>
       <input placeholder="Nickname"></input>
       <button>ready</button>

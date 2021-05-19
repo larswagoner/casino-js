@@ -15,20 +15,18 @@ var rooms = []
 
 io.on('connection', socket => {
   
-  console.log(socket.id)
+  console.log(socket.id + " connected")
+
   socket.on('createRoom', ({ room }) => {
     if (rooms.indexOf(room) === -1) {
       rooms.push(room)
     } else {
       console.log("Error, room already exists")
     }
-    // if (rooms.indexOf(room) > -1) {
-    //   console.log("ya")
-    // } else {
-    //   console.log("na")
-    // }
-    // console.log("created room: " + room)
   })
+
+  socket.on('disconnect', () => console.log(socket.id + " disconnected"))
+
 
 })
 
